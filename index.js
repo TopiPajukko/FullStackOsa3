@@ -34,6 +34,10 @@ let persons =
         ]
       }
 
+app.get('/', (req, res) => {
+  res.send()
+})
+
 app.get('/api/persons', (req, res) => {
   res.json(persons)
 })
