@@ -1,5 +1,2 @@
-# Täältä löytyy Osan 3 websovelluksen backend
-https://phonebookbackend-cnd3.onrender.com
-
-# Phonebookin FullStack
+# Phonebookin FullStack websovellus
 https://phonebookfullstack-jfos.onrender.com/
