@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/TopiPajukko/FullStackOsa3#readme",
   "dependencies": {
-    "build": "^0.1.4",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.6.3",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
