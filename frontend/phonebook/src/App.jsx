@@ -129,7 +129,7 @@ const App = () => {
 
   return(
     <div>
-      <h2>Phonebook</h2>
+      <h2>Phonebook toimii</h2>
       <Notification message={notification} />
       <Filter value={filterValue} handleChange={handleNewFilter}/>
       <Form onSubmit={addPerson} nameValue={newName} handleNameValue={handleNewName} nroValue={newNro} handleNroValue={handleNewNro}/>
