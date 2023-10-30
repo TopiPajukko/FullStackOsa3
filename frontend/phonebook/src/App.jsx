@@ -46,7 +46,7 @@ const App = () => {
   
   useEffect(()=>{
   personService.getAll().then(response =>
-    {setPersons(response.data.persons)})
+    {setPersons(response.data)})
   }, [])
 
   const deletePerson = id => {
@@ -86,8 +86,10 @@ const App = () => {
     if(persons.find((elem) => elem.name === newName)) {
       if(window.confirm(`${newName} is already added to phonebook. Want to replace old number?`)) {
         const updatedPerson = persons.find((elem) => elem.name === newName)
-        personService.update(updatedPerson.id, personObj).then(response => {console.log(response.data)}).catch(() => {
-          setNotification(`information of ${updatedPerson.name} has already been removed from server`)
+        personService.update(updatedPerson.id, personObj)
+        .then(response => {console.log(response.data)})
+        .catch((err) => {
+        setNotification(`${err.response.data}`)
         }) 
         setTimeout(() => {
           setNotification(`number of ${newName} is changed`)
@@ -95,10 +97,13 @@ const App = () => {
       }
     } else {
       personService.create(personObj).then(response => {console.log(response.data)})
+      .catch((err) => {
+      setNotification(`${err.response.data}`)
+      })
       setNotification(`Successfully added ${newName}`)
           setTimeout(() => {
           setNotification(null)
-        }, 5000)
+        }, 5000) 
     }
   }
 

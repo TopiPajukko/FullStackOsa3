@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+require('dotenv').config();
 
 mongoose.set('strictQuery', false)
 
@@ -40,4 +41,4 @@ personnelSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Personnel', personnelSchema)
+module.exports = mongoose.model('Person', personnelSchema)
